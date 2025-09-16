@@ -3,13 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Thêm các dịch vụ vào container.
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
-// Khúc này bạn cần thêm vào để đăng ký DbContext và connection string
+// Cấu hình các dịch vụ Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Đăng ký AppDbContext và chuỗi kết nối
 var connectionString = builder.Configuration.GetConnectionString("WebAPIConnectionString");
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -18,10 +19,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Cấu hình HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    // Cấu hình middleware Swagger
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
