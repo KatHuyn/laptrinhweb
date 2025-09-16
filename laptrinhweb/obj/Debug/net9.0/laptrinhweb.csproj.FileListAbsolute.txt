@@ -164,3 +164,6 @@ D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Ru
 D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\BT\laptrinhweb\laptrinhweb\obj\Debug\net9.0\laptrinhweb.sourcelink.json
+D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\BT\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
