@@ -5,10 +5,45 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Book/add-book": {
+    "/api/Books/get-all-books": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Books/get-book-by-id/{id}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Books/add-book": {
       "post": {
         "tags": [
-          "Book"
+          "Books"
         ],
         "requestBody": {
           "content": {
@@ -36,45 +71,10 @@
         }
       }
     },
-    "/api/Book/get-all-books": {
-      "get": {
-        "tags": [
-          "Book"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Book/get-book-by-id/{id}": {
-      "get": {
-        "tags": [
-          "Book"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Book/update-book-by-id/{id}": {
+    "/api/Books/update-book-by-id/{id}": {
       "put": {
         "tags": [
-          "Book"
+          "Books"
         ],
         "parameters": [
           {
@@ -113,10 +113,10 @@
         }
       }
     },
-    "/api/Book/delete-book-by-id/{id}": {
+    "/api/Books/delete-book-by-id/{id}": {
       "delete": {
         "tags": [
-          "Book"
+          "Books"
         ],
         "parameters": [
           {

@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "D:\\BT\\laptrinhweb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\models\\dto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\models\\dto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\models\\dto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\models\\dto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\models\\dto\\addbookrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\migrations\\20250916095742_initialdatabasemigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\migrations\\20250916095742_initialdatabasemigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|d:\\bt\\laptrinhweb\\laptrinhweb\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74793340-EDBF-45DF-A438-5B3751980C4D}|laptrinhweb\\laptrinhweb.csproj|solutionrelative:laptrinhweb\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +50,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "SQLBookRepository.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Repositories\\SQLBookRepository.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Repositories\\SQLBookRepository.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Repositories\\SQLBookRepository.cs",
+              "RelativeToolTip": "laptrinhweb\\Repositories\\SQLBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:52:46.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Repositories\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Repositories\\IBookRepository.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Repositories\\IBookRepository.cs",
+              "RelativeToolTip": "laptrinhweb\\Repositories\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:50:32.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "laptrinhweb\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:46:35.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookDTO.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\BookDTO.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Models\\DTO\\BookDTO.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\BookDTO.cs",
+              "RelativeToolTip": "laptrinhweb\\Models\\DTO\\BookDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:28:10.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BookController.cs",
               "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "laptrinhweb\\Controllers\\BookController.cs",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Controllers\\BookController.cs",
-              "RelativeToolTip": "laptrinhweb\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAkwKwAAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Controllers\\BookController.cs*",
+              "RelativeToolTip": "laptrinhweb\\Controllers\\BookController.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T10:22:52.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\appsettings.json",
+              "RelativeDocumentMoniker": "laptrinhweb\\appsettings.json",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\appsettings.json",
+              "RelativeToolTip": "laptrinhweb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-16T09:51:31.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Program.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Program.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Program.cs*",
+              "RelativeToolTip": "laptrinhweb\\Program.cs*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:55:20.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "addBookRequestDTO.cs",
+              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
+              "RelativeDocumentMoniker": "laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
+              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
+              "RelativeToolTip": "laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:33:28.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "20250916095742_InitialDatabaseMigration.cs",
               "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Migrations\\20250916095742_InitialDatabaseMigration.cs",
               "RelativeDocumentMoniker": "laptrinhweb\\Migrations\\20250916095742_InitialDatabaseMigration.cs",
@@ -71,67 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Program.cs",
-              "RelativeDocumentMoniker": "laptrinhweb\\Program.cs",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Program.cs",
-              "RelativeToolTip": "laptrinhweb\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:55:20.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\appsettings.json",
-              "RelativeDocumentMoniker": "laptrinhweb\\appsettings.json",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\appsettings.json",
-              "RelativeToolTip": "laptrinhweb\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-16T09:51:31.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "laptrinhweb\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "laptrinhweb\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswCEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:46:35.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookDTO.cs",
-              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\BookDTO.cs",
-              "RelativeDocumentMoniker": "laptrinhweb\\Models\\DTO\\BookDTO.cs",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\BookDTO.cs",
-              "RelativeToolTip": "laptrinhweb\\Models\\DTO\\BookDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T10:28:10.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "addBookRequestDTO.cs",
-              "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
-              "RelativeDocumentMoniker": "laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
-              "ToolTip": "D:\\BT\\laptrinhweb\\laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
-              "RelativeToolTip": "laptrinhweb\\Models\\DTO\\addBookRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T10:33:28.652Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\BT\\laptrinhweb\\laptrinhweb\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "laptrinhweb\\Migrations\\AppDbContextModelSnapshot.cs",
