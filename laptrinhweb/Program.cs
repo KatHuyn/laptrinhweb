@@ -1,4 +1,5 @@
 ﻿using laptrinhweb.Data;
+using laptrinhweb.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(connectionString);
 });
-
+builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 var app = builder.Build();
 
 // Cấu hình HTTP request pipeline.
