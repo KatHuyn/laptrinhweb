@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "laptrinhweb.Controllers.AuthorsController",
+    "Method": "AddAuthors",
+    "RelativePath": "api/Authors/add-author",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addAuthorRequestDTO",
+        "Type": "laptrinhweb.Models.DTO.AddAuthorRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.AuthorsController",
+    "Method": "DeleteBookById",
+    "RelativePath": "api/Authors/delete-author-by-id/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.AuthorsController",
+    "Method": "GetAllAuthor",
+    "RelativePath": "api/Authors/get-all-author",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.AuthorsController",
+    "Method": "GetAuthorById",
+    "RelativePath": "api/Authors/get-author-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.AuthorsController",
+    "Method": "UpdateBookById",
+    "RelativePath": "api/Authors/update-author-by-id/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "authorDTO",
+        "Type": "laptrinhweb.Models.DTO.AuthorNoIdDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebAPI_simple.Controllers.BooksController",
     "Method": "AddBook",
     "RelativePath": "api/Books/add-book",
@@ -73,6 +152,85 @@
       {
         "Name": "bookDTO",
         "Type": "laptrinhweb.Models.DTO.AddBookRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.PublishersController",
+    "Method": "AddPublisher",
+    "RelativePath": "api/Publishers/add-publisher",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addPublisherRequestDTO",
+        "Type": "laptrinhweb.Models.DTO.AddPublisherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.PublishersController",
+    "Method": "DeletePublisherById",
+    "RelativePath": "api/Publishers/delete-publisher-by-id/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.PublishersController",
+    "Method": "GetAllPublisher",
+    "RelativePath": "api/Publishers/get-all-publisher",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.PublishersController",
+    "Method": "GetPublisherById",
+    "RelativePath": "api/Publishers/get-publisher-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "laptrinhweb.Controllers.PublishersController",
+    "Method": "UpdatePublisherById",
+    "RelativePath": "api/Publishers/update-publisher-by-id/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "publisherDTO",
+        "Type": "laptrinhweb.Models.DTO.PublisherNoIdDTO",
         "IsRequired": true
       }
     ],
