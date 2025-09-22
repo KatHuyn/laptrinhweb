@@ -77,7 +77,6 @@ namespace laptrinhweb.Repositories
                     AuthorId = id
                 };
                 _dbContext.Books_Authors.Add(_book_author);
-                _dbContext.SaveChanges();
             }
             return addBookRequestDTO;
         }
@@ -96,14 +95,12 @@ namespace laptrinhweb.Repositories
                 bookDomain.CoverUrl = bookDTO.CoverUrl;
                 bookDomain.DateAdded = bookDTO.DateAdded;
                 bookDomain.PublisherID = bookDTO.PublisherID;
-                _dbContext.SaveChanges();
             }
 
             var authorDomain = _dbContext.Books_Authors.Where(a => a.BookId == id).ToList();
             if (authorDomain != null)
             {
                 _dbContext.Books_Authors.RemoveRange(authorDomain);
-                _dbContext.SaveChanges();
             }
             foreach (var authorid in bookDTO.AuthorIds)
             {
@@ -114,8 +111,8 @@ namespace laptrinhweb.Repositories
                 };
 
                 _dbContext.Books_Authors.Add(_book_author);
-                _dbContext.SaveChanges();
             }
+            _dbContext.SaveChanges();
             return bookDTO;
         }
         public Book? DeleteBookById(int id)
