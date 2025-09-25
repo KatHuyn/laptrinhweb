@@ -2,6 +2,8 @@
 using laptrinhweb.Models.DTO;
 using laptrinhweb.Models.Domain;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
 namespace laptrinhweb.Repositories
 {
@@ -49,10 +51,37 @@ namespace laptrinhweb.Repositories
             }).FirstOrDefault();
             return bookWithIdDTO;
         }
-
         public AddBookRequestDTO AddBook(AddBookRequestDTO addBookRequestDTO)
         {
-            //map DTO to Domain Model 
+            // Kiểm tra PublisherID có tồn tại không
+            var publisherExists = _dbContext.Publishers.Any(p => p.Id == addBookRequestDTO.PublisherID);
+            if (!publisherExists)
+            {
+                throw new ArgumentException("Publisher ID does not exist.");
+            }
+
+            // Mỗi sách phải có ít nhất 1 tác giả.
+            if (addBookRequestDTO.AuthorIds == null || addBookRequestDTO.AuthorIds.Count == 0)
+            {
+                throw new ArgumentException("A book must have at least one author.");
+            }
+
+            // Kiểm tra tên sách có bị trùng với cùng một nhà xuất bản không
+            var bookTitleExists = _dbContext.Books.Any(b => b.Title == addBookRequestDTO.Title && b.PublisherID == addBookRequestDTO.PublisherID);
+            if (bookTitleExists)
+            {
+                throw new InvalidOperationException("A book with the same title already exists for this publisher.");
+            }
+
+            // Kiểm tra giới hạn xuất bản của Nhà xuất bản trong 1 năm (100 cuốn)
+            var currentYear = DateTime.Now.Year;
+            var publishedBooksThisYear = _dbContext.Books
+                .Count(b => b.PublisherID == addBookRequestDTO.PublisherID && b.DateAdded.Year == currentYear);
+            if (publishedBooksThisYear >= 100)
+            {
+                throw new InvalidOperationException($"Publisher with ID {addBookRequestDTO.PublisherID} đã đạt giới hạn xuất bản 100 cuốn trong năm nay.");
+            }
+
             var bookDomainModel = new Book
             {
                 Title = addBookRequestDTO.Title,
@@ -65,19 +94,42 @@ namespace laptrinhweb.Repositories
                 DateAdded = addBookRequestDTO.DateAdded,
                 PublisherID = addBookRequestDTO.PublisherID
             };
-            //Use Domain Model to add Book 
+
             _dbContext.Books.Add(bookDomainModel);
             _dbContext.SaveChanges();
 
             foreach (var id in addBookRequestDTO.AuthorIds)
             {
-                var _book_author = new Book_Author()
+                // Kiểm tra tác giả có tồn tại không
+                var authorExists = _dbContext.Authors.Any(a => a.Id == id);
+                if (!authorExists)
+                {
+                    throw new ArgumentException($"Author with ID {id} does not exist.");
+                }
+
+                // Kiểm tra số lượng sách của tác giả (10 cuốn)
+                var bookCount = _dbContext.Books_Authors.Count(ba => ba.AuthorId == id);
+                if (bookCount >= 10)
+                {
+                    throw new InvalidOperationException($"Author with ID {id} has already written the maximum number of books (10).");
+                }
+
+                // Kiểm tra mối quan hệ đã tồn tại không
+                var existingRelationship = _dbContext.Books_Authors.Any(ba => ba.BookId == bookDomainModel.Id && ba.AuthorId == id);
+                if (existingRelationship)
+                {
+                    throw new InvalidOperationException($"Author with ID {id} is already assigned to this book.");
+                }
+
+                var bookAuthor = new Book_Author()
                 {
                     BookId = bookDomainModel.Id,
                     AuthorId = id
                 };
-                _dbContext.Books_Authors.Add(_book_author);
+                _dbContext.Books_Authors.Add(bookAuthor);
             }
+
+            _dbContext.SaveChanges();
             return addBookRequestDTO;
         }
 

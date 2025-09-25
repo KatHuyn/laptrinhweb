@@ -1,6 +1,7 @@
 ﻿using laptrinhweb.Data;
 using laptrinhweb.Models.Domain;
 using laptrinhweb.Models.DTO;
+using System;
 using System.Linq;
 
 namespace laptrinhweb.Repositories
@@ -73,15 +74,22 @@ namespace laptrinhweb.Repositories
             return authorNoIdDTO;
         }
 
+        // Thay thế phương thức DeleteAuthorById
         public Author? DeleteAuthorById(int id)
         {
             var authorDomain = _dbContext.Authors.FirstOrDefault(n => n.Id == id);
             if (authorDomain != null)
             {
+                var hasBooks = _dbContext.Books_Authors.Any(ba => ba.AuthorId == id);
+                if (hasBooks)
+                {
+                    throw new InvalidOperationException("Không thể xóa Tác giả có sách liên kết. Hãy gỡ liên kết trong Book_Author trước khi xóa.");
+                }
+
                 _dbContext.Authors.Remove(authorDomain);
                 _dbContext.SaveChanges();
             }
-            return null;
+            return authorDomain;
         }
     }
 }

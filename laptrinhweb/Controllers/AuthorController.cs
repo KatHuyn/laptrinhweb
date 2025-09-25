@@ -51,8 +51,21 @@ namespace laptrinhweb.Controllers
         [HttpDelete("delete-author-by-id/{id}")]
         public IActionResult DeleteBookById(int id)
         {
-            var authorDelete = _authorRepository.DeleteAuthorById(id);
-            return Ok();
+            try
+            {
+                var authorDelete = _authorRepository.DeleteAuthorById(id);
+                if (authorDelete == null)
+                {
+                    return NotFound($"Không tìm thấy Tác giả với ID {id}.");
+                }
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                // Bắt lỗi không xóa được do còn sách liên kết (B.Tập 15)
+                ModelState.AddModelError("Author", ex.Message);
+                return BadRequest(ModelState); // Trả về 400 Bad Request
+            }
         }
     }
 }

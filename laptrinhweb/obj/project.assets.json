@@ -5178,23 +5178,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asker\\.nuget\\packages\\": {},
-    "D:\\app\\vs\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\KatHuyn\\.nuget\\packages\\": {},
+    "D:\\App\\vs\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BT\\laptrinhweb\\laptrinhweb\\laptrinhweb.csproj",
+      "projectUniqueName": "D:\\baitap\\vs\\laptrinhweb\\laptrinhweb\\laptrinhweb.csproj",
       "projectName": "laptrinhweb",
-      "projectPath": "D:\\BT\\laptrinhweb\\laptrinhweb\\laptrinhweb.csproj",
-      "packagesPath": "C:\\Users\\asker\\.nuget\\packages\\",
-      "outputPath": "D:\\BT\\laptrinhweb\\laptrinhweb\\obj\\",
+      "projectPath": "D:\\baitap\\vs\\laptrinhweb\\laptrinhweb\\laptrinhweb.csproj",
+      "packagesPath": "C:\\Users\\KatHuyn\\.nuget\\packages\\",
+      "outputPath": "D:\\baitap\\vs\\laptrinhweb\\laptrinhweb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\app\\vs\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\App\\vs\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\asker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KatHuyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5269,7 +5269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
