@@ -37,8 +37,16 @@ namespace laptrinhweb.Controllers
         [HttpPost("add-publisher")]
         public ActionResult AddPublisher([FromBody] AddPublisherRequestDTO addPublisherRequestDTO)
         {
-            var publisherAdd = _publisherRepository.AddPublisher(addPublisherRequestDTO);
-            return Ok(publisherAdd);
+            try
+            {
+                var publisherAdd = _publisherRepository.AddPublisher(addPublisherRequestDTO);
+                return Ok(publisherAdd);
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Conflict", ex.Message);
+                return Conflict(ModelState); // Trả về 409 Conflict
+            }
         }
 
         [HttpPut("update-publisher-by-id/{id}")]
@@ -51,8 +59,20 @@ namespace laptrinhweb.Controllers
         [HttpDelete("delete-publisher-by-id/{id}")]
         public ActionResult DeletePublisherById(int id)
         {
-            var publisherDelete = _publisherRepository.DeletePublisherById(id);
-            return Ok();
+            try
+            {
+                var publisherDelete = _publisherRepository.DeletePublisherById(id);
+                if (publisherDelete == null)
+                {
+                    return NotFound($"Không tìm thấy Nhà xuất bản với ID {id}.");
+                }
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Publisher", ex.Message);
+                return BadRequest(ModelState); // Trả về 400 Bad Request
+            }
         }
     }
 }

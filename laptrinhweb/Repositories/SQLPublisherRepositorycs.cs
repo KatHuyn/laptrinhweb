@@ -1,6 +1,7 @@
 ﻿using laptrinhweb.Data;
 using laptrinhweb.Models.Domain;
 using laptrinhweb.Models.DTO;
+using System;
 using System.Linq;
 
 namespace laptrinhweb.Repositories
@@ -42,9 +43,15 @@ namespace laptrinhweb.Repositories
             }
             return null;
         }
-
         public AddPublisherRequestDTO AddPublisher(AddPublisherRequestDTO addPublisherRequestDTO)
         {
+            // Kiểm tra tên nhà xuất bản có bị trùng không
+            var existingPublisher = _dbContext.Publishers.Any(p => p.Name == addPublisherRequestDTO.Name);
+            if (existingPublisher)
+            {
+                throw new InvalidOperationException("Tên Nhà xuất bản đã tồn tại."); // Bắt lỗi 409 ở Controller
+            }
+
             var publisherDomainModel = new Publisher
             {
                 Name = addPublisherRequestDTO.Name,
@@ -53,6 +60,25 @@ namespace laptrinhweb.Repositories
             _dbContext.Publishers.Add(publisherDomainModel);
             _dbContext.SaveChanges();
             return addPublisherRequestDTO;
+        }
+
+        // Thay thế DeletePublisherById
+        public Publisher? DeletePublisherById(int id)
+        {
+            var publisherDomain = _dbContext.Publishers.FirstOrDefault(n => n.Id == id);
+            if (publisherDomain != null)
+            {
+                // Kiểm tra các sách tham chiếu tới Publisher này
+                var hasBooks = _dbContext.Books.Any(b => b.PublisherID == id);
+                if (hasBooks)
+                {
+                    throw new InvalidOperationException("Không thể xóa Nhà xuất bản có sách liên kết."); // Bắt lỗi 400 ở Controller
+                }
+
+                _dbContext.Publishers.Remove(publisherDomain);
+                _dbContext.SaveChanges();
+            }
+            return publisherDomain;
         }
 
         public PublisherNoIdDTO UpdatePublisherById(int id, PublisherNoIdDTO publisherNoIdDTO)
@@ -67,16 +93,6 @@ namespace laptrinhweb.Repositories
             return null;
         }
 
-        public Publisher? DeletePublisherById(int id)
-        {
-            var publisherDomain = _dbContext.Publishers.FirstOrDefault(n => n.Id == id);
-            if (publisherDomain != null)
-            {
-                _dbContext.Publishers.Remove(publisherDomain);
-                _dbContext.SaveChanges();
-                return publisherDomain; // Trả về đối tượng đã xóa
-            }
-            return null;
-        }
+    
     }
 }

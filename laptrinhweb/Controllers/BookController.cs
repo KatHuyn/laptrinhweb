@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
+using System.Text.RegularExpressions;
+using laptrinhweb.CustomActionFilter;
 
 namespace WebAPI_simple.Controllers
 {
@@ -37,11 +39,42 @@ namespace WebAPI_simple.Controllers
             var bookWithIdDTO = _bookRepository.GetBookById(id);
             return Ok(bookWithIdDTO);
         }
+        private bool ValidateTitleWithoutSpecialChars(string title) 
+        {
+            // Cho phép chữ cái, số và khoảng trắng
+            string pattern = @"^[a-zA-Z0-9\s]*$";
+            return Regex.IsMatch(title, pattern);
+        }
         [HttpPost("add-book")]
+        [ValidateModel]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
-            var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
-            return Ok(bookAdd);
+            //Kiểm tra ký tự đặc biệt
+            if (!ValidateTitleWithoutSpecialChars(addBookRequestDTO.Title))
+            {
+                ModelState.AddModelError("Title", "Title không được chứa ký tự đặc biệt.");
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
+                return Ok(bookAdd);
+            }
+            catch (ArgumentException ex)
+            {
+                ModelState.AddModelError("Validation", ex.Message);
+                return BadRequest(ModelState); // Trả về 400 Bad Request
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("Conflict", ex.Message);
+                return Conflict(ModelState); // Trả về 409 Conflict
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Lỗi server không xác định.");
+            }
         }
 
         [HttpPut("update-book-by-id/{id}")]
