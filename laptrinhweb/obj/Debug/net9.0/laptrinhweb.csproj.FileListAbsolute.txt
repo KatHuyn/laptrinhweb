@@ -334,3 +334,9 @@ D:\baitap\vs\laptrinhweb\laptrinhweb\obj\Debug\net9.0\staticwebassets.upToDateCh
 D:\baitap\vs\laptrinhweb\laptrinhweb\obj\Debug\net9.0\laptrinh.761AA920.Up2Date
 D:\baitap\vs\laptrinhweb\laptrinhweb\obj\Debug\net9.0\laptrinhweb.genruntimeconfig.cache
 D:\baitap\vs\laptrinhweb\laptrinhweb\obj\Debug\net9.0\ref\laptrinhweb.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\baitap\vs\laptrinhweb\laptrinhweb\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

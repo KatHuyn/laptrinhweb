@@ -8,11 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Text.RegularExpressions;
 using laptrinhweb.CustomActionFilter;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI_simple.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly AppDbContext _dbContext;
@@ -25,10 +27,10 @@ namespace WebAPI_simple.Controllers
         }
 
         [HttpGet("get-all-books")]
-        public IActionResult GetAll()
+        public IActionResult GetAll([FromQuery]String? filterOn, [FromQuery]String? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
         {
-            // su dung reposity pattern  
-            var allBooks = _bookRepository.GetAllBooks();
+            // su dung reposity pattern  Quer
+            var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy, isAscending, pageNumber,pageSize);
             return Ok(allBooks);
         }
 
