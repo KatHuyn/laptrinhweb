@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("laptrinhweb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d3cd09cdb6b197a71051ca26ce65b2f8948f9a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e98cc4220530c30eb8b367ae85edb8c9f1a6eca1")]
 [assembly: System.Reflection.AssemblyProductAttribute("laptrinhweb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("laptrinhweb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
